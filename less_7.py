@@ -31,20 +31,10 @@
 # почему не с нуля). Примечание: бинарной операцией называется любая операция, у которой
 # ровно два аргумента, как, например, у операции умножения.
 
-# def print_operation_table(operation, num_row = 6, num_columns = 6):
-#     list_1 = [n + 1 for n in range(num_row)]
-#     list_2 = [n + 1 for n in range(num_columns)]
-#     for i in range(num_row):
-#         list_1 = operation
-#         print(list_1)
-#
-#
-#
-# print_operation_table(lambda x, y: x * y)
 
 from math import log10
 
-def printOperationTable(operation, numRows=9, numColumns=9):
+def print_оperation_table(operation, numRows=9, numColumns=9):
     if operation(1,1)==2:
         print(1,end='\t')
 
@@ -56,3 +46,6 @@ def printOperationTable(operation, numRows=9, numColumns=9):
                 column=column-1
             print("{:>{}}".format(operation(row,column), colSize), end='\t')
         print()
+
+
+print_оperation_table(lambda x, y: x * y)
